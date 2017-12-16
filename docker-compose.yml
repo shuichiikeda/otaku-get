@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  otaku-get:
+    container_name: otaku-get
+    image:  beevelop/ionic
+    working_dir: /tmp/app
+    command: bash -c 'cd /tmp/app/otaku-get  &&  ionic serve --port 8100'
+    ports:
+        - "1080:8100"
+    volumes:
+        - "~/:/tmp/app"
